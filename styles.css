@@ -437,14 +437,27 @@ body {
   font-weight: 800;
   letter-spacing: -0.01em;
 }
-.gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* горизонтальная лента со свайпом (carousel) */
+.gallery__scroll {
+  display: flex;
   gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* лента уходит «в край» контейнера, следующее фото подглядывает */
+  margin: 0 -16px;
+  padding: 2px 16px;
+  scrollbar-width: none; /* Firefox */
+}
+.gallery__scroll::-webkit-scrollbar {
+  display: none; /* WebKit */
 }
 .gallery__item {
   margin: 0;
-  aspect-ratio: 1 / 1;
+  flex: 0 0 72%;
+  max-width: 300px;
+  scroll-snap-align: start;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-md);
   overflow: hidden;
   display: grid;
