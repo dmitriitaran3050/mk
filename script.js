@@ -16,7 +16,7 @@
     TELEGRAM_URL: "https://t.me/LisitsyUm_bot?start=mk",
     VK_URL: "https://vk.me/lisicium?ref=mk&ref_source=vizitka",
     MAX_URL: "https://max.ru/id780518760353_bot?start=mk",
-    METRIKA_ID: 109623181,
+    METRIKA_ID: 109654820,
   };
 
   var urlByCta = {
