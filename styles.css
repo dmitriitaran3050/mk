@@ -425,6 +425,53 @@ body {
   font-weight: 700;
 }
 
+/* ---------- Галерея фото ---------- */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gallery__title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.gallery__item {
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  /* мягкая подложка-заглушка в палитре светофора */
+  background:
+    radial-gradient(circle at 30% 25%, rgba(108, 179, 63, 0.1), transparent 60%),
+    radial-gradient(circle at 75% 80%, rgba(232, 119, 46, 0.1), transparent 60%),
+    var(--bg-soft);
+  border: 1px solid var(--line);
+}
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery__ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted-soft);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 /* ---------- Блок «почему бесплатно» ---------- */
 .why-block {
   display: flex;
